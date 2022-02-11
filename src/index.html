@@ -12,8 +12,8 @@
     <div class="starting-page">
       <h4>About the Currency Exchanger</h4>
       <p>Here at <em>Currency Exchangers inc.</em> we strive to make your life as simple as possible when traveling or acquiring different currencies of your choice.</p>
-      <p>We offer a list of <strong>159</strong> different currencies from around the globe. We believe it shouldn't cause a headache to figure out how much money you need to exchange to a different currency. With our easy to use format, you can pick your starting currency and the currency you'd like to exchange it to from your starting amount. Click the <em>Get Started</em> button to get that exchange!</p>
-      <button class="btn3">Get Started!</button>
+      <p>We offer a list of <strong>159</strong> different currencies from around the globe. We believe it shouldn't cause a headache to figure out how much money you need to exchange to a different currency. With our easy to use format, you can pick your starting currency and the currency you'd like to exchange it to from your starting amount.</p> <p>Click the <em>Get Started</em> button to get that exchange!</p>
+      <button class="btn" id="start-btn">Get Started!</button>
     </div>
     <div class="form-section">
       <form id="formOne">
@@ -193,7 +193,7 @@
             <option value="ZMW">Zambian Kwacha - Zambia</option>
           </datalist>  
         </div>
-        <button class="btn" type="submit">Show Conversion!</button>
+        <button class="btn" id="show-btn" type="submit">Show Conversion!</button>
       </form>
     </div>
     <div class="card">
@@ -202,7 +202,7 @@
       <h4>Your conversion from <span class="usd"></span> <span class="start"></span> is:</h4>
       <p><span class="show-result"></span> <span class="chosen"></span></p>
       <div id="showError"></div>
-      <button class="btn2">New Exchange!</button>
+      <button class="btn" id="back-btn">Back to Home!</button>
   </div>
   </div>
 </body>

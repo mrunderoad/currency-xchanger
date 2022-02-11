@@ -23,6 +23,7 @@ p {
 
 .form-section {
   display: none;
+  text-align: center;
 }
 
 .card {
@@ -38,18 +39,6 @@ p {
 .btn {
   background-color: rgba(0, 128, 0, 0.5);
   margin-top: 2%;
-  margin-left: 44%;
-}
-
-.btn2 {
-  background-color: chocolate;
-  margin-top: 1%;
-  border-radius: 5px;
-}
-
-.btn2:hover {
-  color: rgb(0, 55, 236);
-  background-color: aquamarine;
 }
 
 .show-cash, .show-result, .showError {
@@ -74,6 +63,7 @@ label {
 .starting-page {
   background-color: rgba(0, 0, 0, 0.308);
   padding: 5%;
-  border: 4px dotted red;
+  border: 4px ridge red;
   border-radius: 10px;
+  text-align: center;
 }

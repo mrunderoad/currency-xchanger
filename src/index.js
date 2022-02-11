@@ -54,11 +54,11 @@ $(document).ready(function() {
       $('.card').fadeIn(); 
   });
 
-  $('.btn2').on("click", function() {
+  $('#back-btn').on("click", function() {
     window.location.reload();
   })
 
-  $('.btn3').on("click", function() {
+  $('#start-btn').on("click", function() {
     $('.starting-page').hide();
     $('.form-section').show();
   })
