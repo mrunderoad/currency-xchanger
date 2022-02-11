@@ -2,7 +2,7 @@
 #### By Isaac Overstreet
 
 ### Short Description
-This application is made to see what your currency exchange will be based on input.
+_This application is made to see what your currency exchange will be based on input._
 
 ## Technologies used
 
@@ -17,7 +17,7 @@ This application is made to see what your currency exchange will be based on inp
 * _ExchangeRate-API_
 
 ## Description
-This application is used to help a user determine how much of what currency they can get based off their input in USD. It uses a simple API call with error handling to show knowledge of both. 
+_This application is used to help a user determine how much of what currency they can get based off their input in USD. The user can enter an amount of dollars as well as the starting currency and currency they would like to exchange to. The API call returns currency rate, currency result and time last updated for this project. The free API only allows a few responses and the most important were used for this project._
 
 ## Setup/Installation Requirements
 
