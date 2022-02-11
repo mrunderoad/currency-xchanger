@@ -6,7 +6,7 @@ import ExchangeCurrency from './js/currency.js';
 
 function displayErrors(error) {
   let showErrors = [];
-  showErrors.push("<p class='error-message'> ERROR!")
+  showErrors.push("<p class='error-message'> ERROR!");
   if (parseInt(error) === 404) {
     showErrors.push(`<${error}: Not Found> - Currency not found! Please use a valid three letter currency code.`);
   } else if (parseInt(error) === 403) {
