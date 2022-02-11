@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeCurrency from './js/currency.js';
 
-function clearField() {
+function clearFields() {
   $('#amount').val();
+  $('#currencies').val();
 }
 
 function displayErrors(error) {
@@ -24,10 +25,28 @@ function displayErrors(error) {
   $('#showError').html(showErrors.join(''));
 }
 
+function displayExchange(response) {
+  let result = response.conversion_result;
+  let rate = response.conversion_rate;
+  $('.show-result').text(result);
+  $('.show-cash').text(rate);
+}
+
 $(document).ready(function() {
   $('#formOne').submit(function(event) {
     event.preventDefault();
-    let money = $('#amount').val();
-  
-  })
-})
+    let amount = $('#amount').val();
+    let currency = $('#currencies').val();
+    clearFields(); 
+    ExchangeCurrency.getExchange(currency, amount)
+      .then(function(exchangeResponse) {
+        if (exchangeResponse instanceof Error) {
+          throw Error(exchangeResponse.message);
+        }
+        displayExchange(exchangeResponse, amount)
+      })
+      .catch(function(error) {
+        displayErrors(error.message)
+      });
+  });
+});
