@@ -8,13 +8,13 @@ function displayErrors(error) {
   let showErrors = [];
   showErrors.push("<p class='error-message'> ERROR!")
   if (parseInt(error) === 404) {
-    showErrors.push(`<${error}: not found> - Currency not found! Please use a valid currency code.(USD, EUR, and so on)`);
+    showErrors.push(`<${error}: Not Found> - Currency not found! Please use a valid three letter currency code.`);
   } else if (parseInt(error) === 403) {
-    showErrors(`<${error}: forbidden> - invalid API key!`);
+    showErrors(`<${error}: Forbidden> - Invalid API key!`);
   } else if (parseInt(error) === 400) {
-    showErrors.push(`<${error}: bad request> - Bad request!`);
+    showErrors.push(`<${error}: Bad Request> - Bad request!`);
   } else {
-    showErrors.push(`<${error}> - Something bad happened!`);
+    showErrors.push(`<${error}> - Ruh Roh! Something bad happened!`);
   }
   showErrors.push('</p>');
   $('#showError').html(showErrors.join(''));
@@ -36,7 +36,7 @@ $(document).ready(function() {
     event.preventDefault();
     let amount = $('#amount').val();
     let currency = $('#currencies').val();
-    $('.card').show(); 
+    
     ExchangeCurrency.getExchange(currency, amount)
       .then(function(exchangeResponse) {
         if (exchangeResponse instanceof Error) {
@@ -47,5 +47,11 @@ $(document).ready(function() {
       .catch(function(error) {
         displayErrors(error.message)
       });
+      $('.form-section').fadeOut();
+      $('.card').fadeIn(); 
   });
+
+  $('.btn2').on("click", function() {
+    window.location.reload();
+  })
 });

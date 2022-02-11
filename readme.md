@@ -24,7 +24,7 @@ This application is used to help a user determine how much of what currency they
 * _Navigate to `https://github.com/mrunderoad/currency-xchanger` and clone the project onto your local machine._
 * _Sign up for a free API key at `https://www.exchangerate-api.com/docs/overview`._
 * _Navigate into the repo on your machine and open the terminal to run `npm install`._
-* _Create a .env file in the root of the project to add your api key. EXAMPLE=`API_KEY=yourkey`._
+* _Create a .env file in the root of the project to add your api key. EXAMPLE=`API_KEY=yourkeyhere`._
 * _Next, run `npm run build` to build the project with webpack._
 * _Finally, run `npm run start` to open a live server to see the application in action!_
 
