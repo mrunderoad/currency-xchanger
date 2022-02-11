@@ -9,18 +9,24 @@
       <h1>Currency Exchanger</h1>
       <p>Welcome to the currency exchanger, get that dough exchanged!</p>
     </div>
+    <div class="starting-page">
+      <h4>About the Currency Exchanger</h4>
+      <p>Here at <em>Currency Exchangers inc.</em> we strive to make your life as simple as possible when traveling or acquiring different currencies of your choice.</p>
+      <p>We offer a list of <strong>159</strong> different currencies from around the globe. We believe it shouldn't cause a headache to figure out how much money you need to exchange to a different currency. With our easy to use format, you can pick your starting currency and the currency you'd like to exchange it to from your starting amount. Click the <em>Get Started</em> button to get that exchange!</p>
+      <button class="btn3">Get Started!</button>
+    </div>
     <div class="form-section">
       <form id="formOne">
+        <div class="starting-amount">
+          <label for="amount">How much money would you like to exchange?</label>
+          <input type="number" id="amount" class="form-control" min="1" placeholder="Amount.." required>
+        </div>
         <div class="row">
-          <div class="col-md-4">
-            <label for="amount">How much money would you like to exchange?</label>
-            <input type="number" id="amount" class="form-control" min="1" placeholder="Amount.." required>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label for="starting">Choose your starting currency!</label>
             <input list="options" id="starting" class="form-control" placeholder="Exchange from.." required>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label for="currencies">What currency do you want to exchange to?</label>
             <input list="options" id="currencies" class="form-control" placeholder="Exchange to.." required>
           </div>
@@ -191,10 +197,10 @@
       </form>
     </div>
     <div class="card">
-      <h4>Exchange from <span class="start"></span> to <span class="chosen"></span> is equal to:</h4>
-      <strong><div class="show-cash"></div></strong>
-      <h4>Your conversion from <span class="usd"></span> <span class="start"> to <span class="chosen"></span> is:</h4>
-      <strong><div class="show-result"></div></strong>
+      <h4>Value of 1 <span class="start"></span> to 1 <span class="chosen"></span> is equal to:</h4>
+      <p><span class="show-cash"></span></p>
+      <h4>Your conversion from <span class="usd"></span> <span class="start"></span> is:</h4>
+      <p><span class="show-result"></span> <span class="chosen"></span></p>
       <div id="showError"></div>
       <button class="btn2">New Exchange!</button>
   </div>

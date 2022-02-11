@@ -57,4 +57,9 @@ $(document).ready(function() {
   $('.btn2').on("click", function() {
     window.location.reload();
   })
+
+  $('.btn3').on("click", function() {
+    $('.starting-page').hide();
+    $('.form-section').show();
+  })
 });

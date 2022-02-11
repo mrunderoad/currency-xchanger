@@ -21,6 +21,10 @@ p {
   font-size: 20px;
 }
 
+.form-section {
+  display: none;
+}
+
 .card {
   color: rgb(0, 0, 0);
   display: none;
@@ -49,5 +53,27 @@ p {
 }
 
 .show-cash, .show-result, .showError {
-  font-size: 17px;
+  font-size: 20px;
+}
+
+.starting-amount {
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 2%;
+}
+
+.col-md-6 {
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+}
+
+.starting-page {
+  background-color: rgba(0, 0, 0, 0.308);
+  padding: 5%;
+  border: 4px dotted red;
+  border-radius: 10px;
 }
