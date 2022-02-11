@@ -17,6 +17,11 @@ body {
   text-shadow: 1px 2px 3px blue;
 }
 
+.jumbotron:hover {
+  background-color: rgb(233, 135, 122);
+  box-shadow: 5px 4px 5px white;
+}
+
 h1 {
   font-size: 40px;
 }
@@ -39,6 +44,7 @@ p {
   margin-right: 30%;
   margin-left: 30%;
   border: 4px outset gray;
+  border-radius: 5px;
   padding-top: 3%;
   padding-bottom: 1%;
   padding-left: 2%;
@@ -51,10 +57,14 @@ p {
 .btn {
   background-color: rgba(0, 128, 0, 0.719);
   margin-top: 2%;
+  transition: 1s;
 }
 
 .btn:hover {
   background-color: rgba(0, 216, 0, 0.829);
+  box-shadow: 4px 4px 4px rgb(13, 87, 13);
+  transform: rotateY(360deg);
+  cursor: crosshair;
 }
 
 .show-cash, .show-result, .showError {

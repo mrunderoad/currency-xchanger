@@ -53,7 +53,7 @@ $(document).ready(function() {
         displayErrors(error.message)
       });
       $('.form-section').fadeOut();
-      setTimeout(function(){
+      setTimeout(function() {
         $('.card').fadeIn();
       }, 600);
        
