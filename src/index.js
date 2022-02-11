@@ -40,7 +40,7 @@ $(document).ready(function() {
     let currency = $('#currencies').val();
     let start = $('#starting').val();
     
-    ExchangeCurrency.getExchange(currency, amount, start)
+    ExchangeCurrency.getExchange(start, currency, amount)
       .then(function(exchangeResponse) {
         if (exchangeResponse instanceof Error) {
           throw Error(exchangeResponse.message);
