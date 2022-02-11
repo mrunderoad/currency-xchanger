@@ -23,14 +23,16 @@ function displayErrors(error) {
 function displayExchange(response) {
   let result = response.conversion_result;
   let rate = response.conversion_rate;
+  let updated = response.time_last_update_utc;
   let start = $('#starting').val();
   let chosen = $('#currencies').val();
   let cash = $('#amount').val();
-  $('.chosen').text(chosen)
+  $('.chosen').text(chosen);
   $('.show-result').text(result);
   $('.show-cash').text(rate);
   $('.usd').text(cash);
   $('.start').text(start);
+  $('#lastUpdated').text(updated);
 }
 
 $(document).ready(function() {
@@ -51,7 +53,10 @@ $(document).ready(function() {
         displayErrors(error.message)
       });
       $('.form-section').fadeOut();
-      $('.card').fadeIn(); 
+      setTimeout(function(){
+        $('.card').fadeIn();
+      }, 600);
+       
   });
 
   $('#back-btn').on("click", function() {
@@ -59,7 +64,9 @@ $(document).ready(function() {
   })
 
   $('#start-btn').on("click", function() {
-    $('.starting-page').hide();
-    $('.form-section').show();
+    $('.starting-page').fadeOut();
+    setTimeout(function() {
+      $('.form-section').fadeIn();
+    }, 500);
   })
 });
