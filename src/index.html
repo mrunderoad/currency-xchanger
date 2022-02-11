@@ -12,13 +12,17 @@
     <div class="form-section">
       <form id="formOne">
         <div class="row">
-          <div class="col-md-6">
-            <label for="amount">How many USD would you like to exchange?</label>
-            <input type="number" id="amount" class="form-control" min="1" placeholder="Amount in USD.." required>
+          <div class="col-md-4">
+            <label for="amount">How much money would you like to exchange?</label>
+            <input type="number" id="amount" class="form-control" min="1" placeholder="Amount.." required>
           </div>
-          <div class="col-md-6">
-            <label for="currencies">What currency do you want?</label>
-            <input list="options" id="currencies" class="form-control" placeholder="Exchange USD into.." required>
+          <div class="col-md-4">
+            <label for="starting">Choose your starting currency!</label>
+            <input list="options" id="starting" class="form-control" placeholder="Exchange from.." required>
+          </div>
+          <div class="col-md-4">
+            <label for="currencies">What currency do you want to exchange to?</label>
+            <input list="options" id="currencies" class="form-control" placeholder="Exchange to.." required>
           </div>
           <datalist id="options">
             <option value="AED">UAE Dirham - United Arab Emirates</option>
@@ -187,9 +191,9 @@
       </form>
     </div>
     <div class="card">
-      <h4>$1 in USD in <span class="chosen"></span> is equal to:</h4>
+      <h4>Exchange from <span class="start"></span> to <span class="chosen"></span> is equal to:</h4>
       <strong><div class="show-cash"></div></strong>
-      <h4>Your conversion from <span class="usd"></span> USD to <span class="chosen"></span> is:</h4>
+      <h4>Your conversion from <span class="usd"></span> <span class="start"> to <span class="chosen"></span> is:</h4>
       <strong><div class="show-result"></div></strong>
       <div id="showError"></div>
       <button class="btn2">New Exchange!</button>

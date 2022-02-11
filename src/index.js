@@ -23,12 +23,14 @@ function displayErrors(error) {
 function displayExchange(response) {
   let result = response.conversion_result;
   let rate = response.conversion_rate;
+  let start = $('#starting').val();
   let chosen = $('#currencies').val();
   let cash = $('#amount').val();
   $('.chosen').text(chosen)
   $('.show-result').text(result);
   $('.show-cash').text(rate);
   $('.usd').text(cash);
+  $('.start').text(start);
 }
 
 $(document).ready(function() {
@@ -36,13 +38,14 @@ $(document).ready(function() {
     event.preventDefault();
     let amount = $('#amount').val();
     let currency = $('#currencies').val();
+    let start = $('#starting').val();
     
-    ExchangeCurrency.getExchange(currency, amount)
+    ExchangeCurrency.getExchange(currency, amount, start)
       .then(function(exchangeResponse) {
         if (exchangeResponse instanceof Error) {
           throw Error(exchangeResponse.message);
         }
-        displayExchange(exchangeResponse, amount)
+        displayExchange(exchangeResponse, amount, start);
       })
       .catch(function(error) {
         displayErrors(error.message)
