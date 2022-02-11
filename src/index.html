@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <title>Memory Game</title>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Currency Exchanger</h1>
+      <p>Welcome to the currency exchanger, get that dough exchanged!</p>
+    </div>
+    <form id="formOne">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="amount">How many USD would you like to exchange?</label>
+          <input list="options" id="amount" class="form-control" placeholder="Amount in USD.." required>
+        </div>
+        <div class="col-md-6">
+          <label for="currencies">What currency do you want?</label>
+          <input list="options" id="currencies" class="form-control" placeholder="Exchange USD into.." required>
+        </div>
+        
+      </div>
+    </form>
+  </div>
 </body>
 </html>
