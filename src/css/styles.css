@@ -7,3 +7,7 @@
   border: 3px inset;
   border-radius: 10px;
 }
+
+.card {
+  display: none;
+}

@@ -4,11 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeCurrency from './js/currency.js';
 
-function clearFields() {
-  $('#amount').val();
-  $('#currencies').val();
-}
-
 function displayErrors(error) {
   let showErrors = [];
   showErrors.push("<p class='error-message'> ERROR!")
@@ -28,8 +23,12 @@ function displayErrors(error) {
 function displayExchange(response) {
   let result = response.conversion_result;
   let rate = response.conversion_rate;
+  let chosen = $('#currencies').val();
+  let cash = $('#amount').val();
+  $('.chosen').text(chosen)
   $('.show-result').text(result);
   $('.show-cash').text(rate);
+  $('.usd').text(cash);
 }
 
 $(document).ready(function() {
@@ -37,7 +36,7 @@ $(document).ready(function() {
     event.preventDefault();
     let amount = $('#amount').val();
     let currency = $('#currencies').val();
-    clearFields(); 
+    $('.card').show(); 
     ExchangeCurrency.getExchange(currency, amount)
       .then(function(exchangeResponse) {
         if (exchangeResponse instanceof Error) {
