@@ -1,0 +1,9 @@
+.jumbotron {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  background-color: darksalmon;
+  border: 3px inset;
+  border-radius: 10px;
+}
