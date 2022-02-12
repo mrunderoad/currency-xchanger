@@ -50,23 +50,22 @@ $(document).ready(function() {
         displayExchange(exchangeResponse, amount, start);
       })
       .catch(function(error) {
-        displayErrors(error.message)
+        displayErrors(error.message);
       });
       $('.form-section').fadeOut();
       setTimeout(function() {
         $('.card').fadeIn();
-      }, 600);
-       
+      }, 600); 
   });
 
   $('#back-btn').on("click", function() {
     window.location.reload();
-  })
+  });
 
   $('#start-btn').on("click", function() {
     $('.starting-page').fadeOut();
     setTimeout(function() {
       $('.form-section').fadeIn();
     }, 500);
-  })
+  });
 });

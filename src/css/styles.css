@@ -43,12 +43,12 @@ p {
   text-shadow: 2px 2px 2px black;
   margin-right: 30%;
   margin-left: 30%;
-  border: 4px outset gray;
-  border-radius: 5px;
+  border: 4px outset rgb(34, 194, 3);
+  border-radius: 10px;
   padding-top: 3%;
-  padding-bottom: 1%;
   padding-left: 2%;
   padding-right: 2%;
+  padding-bottom: 2%;
   background-image: url("https://i0.wp.com/www.meme-arsenal.com/memes/bbca872262146a0b93c9f8e0b4524062.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,8 +63,8 @@ p {
 .btn:hover {
   background-color: rgba(0, 216, 0, 0.829);
   box-shadow: 4px 4px 4px rgb(13, 87, 13);
-  transform: rotateY(360deg);
-  cursor: crosshair;
+  transform: scale(1.2);
+  cursor: cell;
 }
 
 .show-cash, .show-result, .showError {
@@ -103,13 +103,12 @@ input:required:focus {
   box-shadow: 3px 3px 3px red;
 }
 
-option:hover {
-  background-color: red;
-}
-
 .starting-page {
   background-color: rgba(0, 0, 0, 0.308);
-  padding: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
   border: 4px ridge red;
   border-radius: 10px;
   text-align: center;
