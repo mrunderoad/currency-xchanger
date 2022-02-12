@@ -52,10 +52,10 @@ $(document).ready(function() {
       .catch(function(error) {
         displayErrors(error.message);
       });
-      $('.form-section').fadeOut();
-      setTimeout(function() {
-        $('.card').fadeIn();
-      }, 600); 
+    $('.form-section').fadeOut();
+    setTimeout(function() {
+      $('.card').fadeIn();
+    }, 600); 
   });
 
   $('#back-btn').on("click", function() {
