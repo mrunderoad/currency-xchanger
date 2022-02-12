@@ -15,6 +15,7 @@ _This application is made to see what your currency exchange will be based on in
 * _Bootstrap_
 * _Babel_
 * _ExchangeRate-API_
+* _Postman_
 
 ## Description
 _This application is used to help a user determine how much of what currency they can get based off their input in USD. The user can enter an amount of dollars as well as the starting currency and currency they would like to exchange to. The API call returns currency rate, currency result and time last updated for this project. The free API only allows a few responses and the most important were used for this project._
@@ -34,4 +35,4 @@ _This application is used to help a user determine how much of what currency the
 
 ### License and Copyright info
 
-MIT license @https://opensource.org/licenses Copyright (c) 2022 Isaac Overstreet
+[MIT license](https://opensource.org/licenses) Copyright (c) 2022 Isaac Overstreet
