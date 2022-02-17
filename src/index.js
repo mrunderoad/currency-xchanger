@@ -10,7 +10,7 @@ function displayErrors(error) {
   if (parseInt(error) === 404) {
     showErrors.push(`<${error}: Not Found> - Currency not found! Please use a valid three letter currency code.`);
   } else if (parseInt(error) === 403) {
-    showErrors(`<${error}: Forbidden> - Invalid API key!`);
+    showErrors.push(`<${error}: Forbidden> - Invalid API key!`);
   } else if (parseInt(error) === 400) {
     showErrors.push(`<${error}: Bad Request> - Bad request!`);
   } else {
